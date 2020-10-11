@@ -9,9 +9,9 @@ class PyMongo:
     @staticmethod
     def getConn():
         if PyMongo.__conn is None:  # Read only once, lazy.
-            #PyMongo.__conn=MongoClient("mongodb+srv://bolt24:ZohoTest@24@cluster0.dyo3i.mongodb.net/NewDB?retryWrites=true&w=majority")
-            username = urllib.parse.quote_plus('bolt24')
-            password = urllib.parse.quote_plus('ZohoTest@24')
+
+            username = urllib.parse.quote_plus('***')
+            password = urllib.parse.quote_plus('****')
             PyMongo.__conn = MongoClient('mongodb+srv://%s:%s@cluster0.dyo3i.mongodb.net/NewDB?retryWrites=true&w=majority' % (username,password))
         return PyMongo.__conn
 
